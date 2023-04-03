@@ -1,10 +1,11 @@
 import { defineUserConfig } from "vuepress";
-
 import theme from "./theme";
+import moveDist from './move-dist'
 /**
  * 参考链接： https://v2.vuepress.vuejs.org/zh/reference/config.html
  */
 export default defineUserConfig({
+  plugins: [moveDist],
   /**
    * 部署站点的基础路径。
    * 如果你想让你的网站部署到一个子路径下，你将需要设置它。
