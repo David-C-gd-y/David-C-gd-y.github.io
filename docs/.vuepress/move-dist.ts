@@ -1,7 +1,6 @@
 import { PluginObject } from "vuepress";
 
 import path from "path";
-import fs from "fs";
 import fse from "fs-extra";
 
 
