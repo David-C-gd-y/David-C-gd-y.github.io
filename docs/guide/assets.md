@@ -36,15 +36,6 @@
 
 我们可以这样在当前页面引用 Logo ：
 
-**Input**
-
-```md
-![VuePress Logo](/images/hero.png)
-```
-
-**Output**
-
-![VuePress Logo](/images/hero.png)
 
 ### Base Helper
 
@@ -52,10 +43,6 @@
 
 在大多数情况下，你不需要担心这些 Public 文件的引用路径，因为 VuePress 会自动帮你处理 `base` 前缀：
 
-```md
-<!-- 你不需要给 `/images/hero.png` 手动添加 `/bar/` 前缀 -->
-![VuePress Logo](/images/hero.png)
-```
 
 然而，有些情况下，你可能会有一些指向 Public 文件的动态路径，尤其是在你开发一个自定义主题的时候。在这种情况下， `base` 无法被自动处理。为了解决这个问题，VuePress 提供了 [withBase](../reference/client-api.md#withbase) 工具函数，它可以帮助你添加 `base` 前缀：
 
