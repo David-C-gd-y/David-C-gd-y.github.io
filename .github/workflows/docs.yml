@@ -42,10 +42,15 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          # 部署到 main 分支
+          # 部署到  gh-pages 分支，这里要注意的是，不要和源代码放在同一个分支
+          # 去到代码仓库 settings -> pages -> , Build and deployment 选择， deploy from a branch
+          # 选择下面 target_branch 填写的分支名称，没有的话 github会自动给你创建，select folder选择 root/ 目录
           target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
+          # 部署目录 路径这个问题，没搞明白，也许是项目根目录的相对路径
           build_dir: ./dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          # 这里要去生成一个 Personal access tokens  给到仓库的下面的 settings ->  secrets and variables -> Actions
+          # AUTO_DEPLOY 是环境变量名称， 到时候填入这个 Personal access tokens 生成的访问令牌，到环境变量中，这个变量名称可以自定义
+          # ${{ secrets.AUTO_DEPLOY }} 代表 访问AUTO_DEPLOY 这个变量，到时候如果要自定义就替换成自定义的名称
           GITHUB_TOKEN: ${{ secrets.AUTO_DEPLOY }}
