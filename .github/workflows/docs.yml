@@ -48,4 +48,4 @@ jobs:
           build_dir: ./dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.AUTO_DEPLOY }}

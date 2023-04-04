@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build && echo '<meta http-equiv=\"refresh\" content=\"0;url=./docs/.vuepress/dist/index.html\">' > ./docs/.vuepress/dist/404.html && git add . && git commit -m 'deploy' && git push origin main"
+    "docs:build": "vuepress build docs"
   },
   "keywords": [],
   "author": "",
