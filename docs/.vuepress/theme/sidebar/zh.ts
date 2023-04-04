@@ -12,7 +12,7 @@ export const sidebarZh: SidebarConfig = files.reduce<SidebarConfig>(
   (fileParsePaths, filename) => {
     if (Array.isArray(fileParsePaths)) {
       if (filename.endsWith(".md")) {
-        fileParsePaths.push(`guide/${filename}`);
+        fileParsePaths.push(`/guide/${filename}`);
       }
     }
     return fileParsePaths;
