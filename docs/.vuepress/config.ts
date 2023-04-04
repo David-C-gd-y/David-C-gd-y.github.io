@@ -14,7 +14,7 @@ export default defineUserConfig({
    * base 将会作为前缀自动地插入到所有以 / 开始的其他选项的链接中，所以你只需要指定一次。
    * 需要注意的是， base 应该是一个以 / 开始和结束的绝对路径名。
    */
-  base: "/",
+  base: "/vueperss-demo/",
   /**
    * 站点的语言。
    * 它将会在最终渲染出的 HTML 中作为 <html> 标签的 lang 属性。
